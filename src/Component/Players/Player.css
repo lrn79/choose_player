@@ -1,0 +1,50 @@
+
+.player{
+    width: 300px;
+    height: 428px;
+    border: 1px solid #95A0A7;
+    border-radius: 10px;
+    position: relative;
+}
+
+.player img{
+    width: 286px;
+    height: 286px;
+    border-radius: 10px;
+    margin:7px;
+}
+.player_name{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 7px;
+}
+.player_info{
+    margin: 0 14px;
+}
+.player_info p{
+    margin-bottom: 0;
+    margin-top: 5px;
+
+}
+.btn-cart{
+    width: 100%;
+    background-color: #c6eb71b9;
+    border: 0;
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.btn-cart:hover{
+    background-color: rgb(44, 253, 7);
+    color: aliceblue;
+}
+.btn-cart .btn-txt{
+    margin-right: 10px;
+}
