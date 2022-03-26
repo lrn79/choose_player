@@ -12,7 +12,7 @@ const Cart = (props) => {
     // }
     return (
         <div className='cart'>
-            <h2>Choose your Player </h2>
+            <h2>Choose your Players </h2>
             <h2>Bot suggestion is :- {name}</h2>
             <p className='player_style'>Select player:{props.cart.map(playerName => <li>{playerName.name}</li>)}</p>
             <div>
