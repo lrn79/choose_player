@@ -16,6 +16,11 @@ const Shop = () => {
         const newCart = [...cart, player]
         setCart(newCart)
     }
+    const drafts = (playerDraft) => {
+        const draft = Math.floor(Math.random() * playerDraft.length);
+        const pickedPlayer = cart[draft];
+        setCart(pickedPlayer)
+    }
 
     return (
         <div className='shop_container'>
@@ -30,6 +35,7 @@ const Shop = () => {
             </div>
             <div className='cart_container'>
                 <Cart cart={cart}
+                    drafts={drafts}
                 ></Cart>
             </div>
         </div>
