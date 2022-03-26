@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Players/Cart/Cart';
 import Player from '../Players/Player';
 import './Shop.css'
 
@@ -15,6 +16,7 @@ const Shop = () => {
         const newCart = [...cart, player]
         setCart(newCart)
     }
+
     return (
         <div className='shop_container'>
             <div className='players_container'>
@@ -26,9 +28,9 @@ const Shop = () => {
                     ></Player>)
                 }
             </div>
-            <div className='cart container'>
-                <h2>Choose your Player </h2>
-                <p>Select player:{cart.map(playerName => playerName.name)}</p>
+            <div className='cart_container'>
+                <Cart cart={cart}
+                ></Cart>
             </div>
         </div>
     );
