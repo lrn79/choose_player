@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Cart.css'
 
 const Cart = (props) => {
-    const { name } = props.cart;
     const { reset } = props;
     const { drafts } = props;
     console.log(props)
@@ -14,12 +13,12 @@ const Cart = (props) => {
     // }
     return (
         <div className='cart'>
-            <h2>Choose your Players </h2>
-            <h2>Bot suggestion is :- {name}</h2>
-            <p className='player_style'>Select player:{props.cart.map(playerName => <li>{playerName.name}</li>)}</p>
-            <div>
+            <h2 className='chosse_player'>Choose your Players </h2>
+            <h3>Selected Players</h3>
+            <p className='player_style'>{props.cart.map(playerName => <li className='player_name_style'>{playerName.name}</li>)}</p>
+            <div className='Cart-btn'>
                 <button onClick={() => drafts(props.cart)}>
-                    Chose your player
+                    Bot Suggestion
                 </button>
                 <button onClick={() => reset(props.cart)} >
                     reset

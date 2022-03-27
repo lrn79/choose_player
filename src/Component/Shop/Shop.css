@@ -8,7 +8,10 @@
     gap: 45px;
 }
 .cart_container{
-    background-color: #FF9900;
+    position: sticky;
+    background-color: #195c9b;
+    border: none;
+    border-radius: 20px;
 }
 
 @media only screen and (max-width: 600px) {
