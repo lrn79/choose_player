@@ -19,7 +19,12 @@ const Shop = () => {
     const drafts = (playerDraft) => {
         const draft = Math.floor(Math.random() * playerDraft.length);
         const pickedPlayer = cart[draft];
-        setCart(pickedPlayer)
+        setCart([pickedPlayer])
+    }
+    // handke reset btn
+    const reset = (PlayerReset) => {
+        PlayerReset = [];
+        setCart(PlayerReset)
     }
 
     return (
@@ -36,6 +41,7 @@ const Shop = () => {
             <div className='cart_container'>
                 <Cart cart={cart}
                     drafts={drafts}
+                    reset={reset}
                 ></Cart>
             </div>
         </div>
